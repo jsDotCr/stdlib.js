@@ -5,6 +5,7 @@ cache:
     - node_modules/
 
 before_script:
+  - apk update && apk upgrade && apk add --no-cache bash git openssh
   - npm install
 
 stages:
