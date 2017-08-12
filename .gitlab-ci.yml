@@ -1,0 +1,32 @@
+image: node:8-alpine
+
+cache:
+  paths: 
+    - node_modules/
+
+before_script:
+  - npm install
+
+stages:
+  - check
+  - test
+
+lint:
+  stage: check
+  script:
+    - npm run lint
+
+updates:
+  stage: check
+  script:
+    - npm run updates
+  allow_failure: true
+
+unit-tests:
+  stage: test
+  script:
+    - npm run coverage
+  artifacts:
+    paths:
+      - coverage
+    expire_in: 1 hour

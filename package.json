@@ -1,0 +1,56 @@
+{
+  "name": "stdlib.js",
+  "version": "1.0.0",
+  "description": "Node.js SDK (and CLI) for StdLib",
+  "main": "index.js",
+  "bin": {
+    "stdlibjs": "cli.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "standard && nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc report --reporter=lcov mocha > coverage.lcov && codecov",
+    "updates": "npm-check-updates --error-level 2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com:jsdotcr/stdlib.js.git"
+  },
+  "keywords": [
+    "stdlib",
+    "serverless",
+    "sdk"
+  ],
+  "author": "jsDotCr",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://gitlab.com/jsdotcr/stdlib.js/issues"
+  },
+  "homepage": "https://gitlab.com/jsdotcr/stdlib.js#README",
+  "dependencies": {
+    "chalk": "1.1.3",
+    "debug": "2.6.8",
+    "dotenv": "4.0.0",
+    "glob": "7.1.2",
+    "got": "7.0.0",
+    "joi": "10.6.0",
+    "tar-fs": "1.15.3",
+    "yargs": "8.0.2"
+  },
+  "devDependencies": {
+    "chai": "4.0.2",
+    "chai-as-promised": "7.1.1",
+    "codecov": "2.2.0",
+    "mocha": "3.4.2",
+    "npm-check-updates": "2.12.0",
+    "nyc": "11.1.0",
+    "proxyquire": "1.8.0",
+    "rewire": "2.5.2",
+    "sinon": "3.2.0",
+    "sinon-chai": "2.12.0",
+    "standard": "10.0.2"
+  }
+}

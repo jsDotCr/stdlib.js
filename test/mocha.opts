@@ -1,0 +1,4 @@
+**/*.spec.js
+--recursive
+--slow 25
+--check-leaks
