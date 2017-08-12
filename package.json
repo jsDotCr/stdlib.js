@@ -11,8 +11,8 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "standard && nyc --reporter=html --reporter=text mocha",
-    "coverage": "nyc report --reporter=lcov mocha > coverage.lcov && codecov",
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "coverage": "npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "updates": "npm-check-updates --error-level 2"
   },
   "repository": {
