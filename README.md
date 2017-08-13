@@ -14,7 +14,7 @@ stdlibjs up <env> [services..]
 
 Where:
 * `env` is the service environment. When its value is `master`, a new versioned release is published (aka: same as `lib release`)
-* `services` is the list of services you want to upload. It's optional: the default behaviour is to upload everything found in `/${yourStdlibUsername}` folder
+* `services` is the list of services you want to upload. It's optional: the default behaviour is to upload everything found in `/${yourStdLibUsername}` folder
 
 Fancy examples, using a serverless workspace that looks like:
 ```
@@ -43,7 +43,7 @@ stdlibjs down <env> [services..]
 
 Where:
 * `env` is the service environment. When its value is `master`, a released version is removed (aka: same as `lib rollback`)
-* `services` is the list of services you want to upload. It's optional: the default behaviour is to tear down **everything** found in `/${yourStdlibUsername}` folder
+* `services` is the list of services you want to upload. It's optional: the default behaviour is to tear down **everything** found in `/${yourStdLibUsername}` folder
 
 ### Install
 ```sh
