@@ -26,6 +26,9 @@ exports.handler = async function ({ env, services = [] }) {
     console.log(`… ${bold(serviceName)}`)
     up({ serviceName, env })
       .then(response => process.stdout)
-      .catch(response => process.stderr)
+      .catch(response => {
+        console.error(response)
+        process.exit(7)
+      })
   })
 }

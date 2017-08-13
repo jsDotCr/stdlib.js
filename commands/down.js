@@ -24,6 +24,9 @@ exports.handler = async function terminate ({ env, services }) {
     console.log(`… ${bold(serviceName)}`)
     down({ serviceName, env })
       .then(response => process.stdout)
-      .catch(response => process.stderr)
+      .catch(response => {
+        console.error(response)
+        process.exit(8)
+      })
   })
 }
