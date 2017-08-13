@@ -13,7 +13,7 @@
     "lint": "standard",
     "test": "nyc --reporter=html --reporter=text mocha",
     "coverage": "npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "updates": "npm-check-updates --error-level 2"
+    "updates": "npm-check"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
     "glob": "7.1.2",
     "got": "7.1.0",
     "joi": "10.6.0",
+    "npm-check": "5.4.5",
     "tar-fs": "1.15.3",
     "yargs": "8.0.2"
   },
@@ -45,7 +46,6 @@
     "chai-as-promised": "7.1.1",
     "codecov": "2.3.0",
     "mocha": "3.5.0",
-    "npm-check-updates": "2.12.1",
     "nyc": "11.1.0",
     "proxyquire": "1.8.0",
     "rewire": "2.5.2",
