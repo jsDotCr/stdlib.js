@@ -11,8 +11,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "nyc --reporter=html --reporter=text mocha",
-    "coverage": "npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha",
     "updates": "npm-check"
   },
   "repository": {
@@ -45,7 +44,6 @@
   "devDependencies": {
     "chai": "4.1.2",
     "chai-as-promised": "7.1.1",
-    "codecov": "3.0.0",
     "mocha": "4.1.0",
     "nyc": "11.4.1",
     "proxyquire": "1.8.0",
