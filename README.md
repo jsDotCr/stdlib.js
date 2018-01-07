@@ -1,5 +1,7 @@
 # StdLib.js – Node.js SDK (and CLI, because why not?)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jsDotCr/stdlib.js.svg)](https://greenkeeper.io/)
+
 Node.js SDK to access the StdLib registry and upload your functions (services).
 
 ## Getting started
