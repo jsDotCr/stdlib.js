@@ -16,7 +16,7 @@ exports.handler = async function http ({ services }) {
   let startingPort = process.env.STDLIBJS_HTTP_PORT || process.env.STDLIB_LOCAL_PORT || 8170
 
   const servicesList = await listServices(services)
-  servicesList.forEach(({ serviceName, servicePath }) => {
+  servicesList.forEach(({ serviceName, servicePath, projectPath }) => {
     console.log(`… ${bold(serviceName)} on port ${startingPort}`)
     let server
     chokidar.watch(servicePath, {
@@ -26,11 +26,11 @@ exports.handler = async function http ({ services }) {
     })
       .on('ready', () => {
         debug('ready', arguments)
-        server = start(servicePath, startingPort)
+        server = start({ servicePath, projectPath }, startingPort)
       })
       .on('change', (changedPath) => {
         debug(`${changedPath} changed, restarting`)
-        server = restart(servicePath, server)
+        server = restart({ servicePath, projectPath }, server)
       })
       .on('error', () => stop(server))
   })
