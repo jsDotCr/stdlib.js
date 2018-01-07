@@ -47,6 +47,18 @@ Where:
 * `env` is the service environment. When its value is `master`, a released version is removed (aka: same as `lib rollback`)
 * `services` is the list of services you want to upload. It's optional: the default behaviour is to tear down **everything** found in `/${yourStdLibUsername}` folder
 
+### HTTP
+```sh
+stdlibjs http [services..]
+```
+
+Where:
+* `services` is the list of services you want to create a server for. It's optional: the default behaviour is to create a server for **each** service found in `/${yourStdLibUsername}` folder
+
+The default port is `8170`: it can be changed by specifying the environment variable `STDLIBJS_HTTP_PORT` or `STDLIB_LOCAL_PORT` (same as StdLib's one).
+
+It uses [chokidar](https://www.npmjs.com/package/chokidar) under the hoods so the service is restarted whenever a change occurs in its folder.
+
 ### Install
 ```sh
 stdlibjs install
