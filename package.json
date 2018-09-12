@@ -32,7 +32,7 @@
   "dependencies": {
     "chalk": "~2.3.0",
     "chokidar": "^2.0.0",
-    "debug": "~3.1.0",
+    "debug": "~4.0.1",
     "dotenv": "~4.0.0",
     "faaslang": "~0.2.3",
     "glob": "~7.1.2",
